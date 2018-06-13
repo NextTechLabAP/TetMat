@@ -50,14 +50,12 @@ if __name__ == "__main__":
                  '# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n'
                  '# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n'
                  '# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n'
-                 '# SOFTWARE.'
+                 '# SOFTWARE.\n'
                  "\n"
                  "# GENERATED USING THE `preprocess.py` script\n"
                  "# DO NOT MODIFY MANUALLY\n"
                  '\n'
-                 'import string\n'
-                 '\n'
-                 'VALID_CHARACTERS = string.ascii_uppercase + string.digits + " .,?!"\n'
+                 f'VALID_CHARACTERS = "{VALID_CHARACTERS}"\n'
                  'ALPHABET_DICT = {}\n'
                  '\n')
 

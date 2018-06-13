@@ -49,7 +49,7 @@ class Matrix_String(object):
     def __process(self):
         for char in self.str_message:
             if char not in ALPHABET_DICT.keys():
-                raise ValueError("Illegal character in message: {}".format(char))
+                raise ValueError(f"Illegal character in message: {char}")
         for ch in self.str_message:
             for i in range(8):
                 self.__full_matrix[i] += ALPHABET_DICT[ch][i] + "0"
