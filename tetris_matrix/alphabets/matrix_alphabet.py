@@ -23,12 +23,8 @@
 import sys
 from time import sleep
 
-# from tetris_matrix.alphabets.alphabet_defs import ALPHABET_DICT
-from alphabet_defs import ALPHABET_DICT
-
 
 class Matrix_String(object):
-
     def __init__(self, message, matrix_width=4, matrix_height=8):
         self.h = matrix_height
         self.w = matrix_width
@@ -93,8 +89,14 @@ class Matrix_String(object):
             sleep(.1)
 
 
-my_text = Matrix_String("0123456789", 2, 8)
-my_text.print_matrix()
+if __name__ == "__main__":
+    from alphabet_defs import ALPHABET_DICT
+else:
+    from tetris_matrix.alphabets.alphabet_defs import ALPHABET_DICT
 
-for i in my_text.get_sliding():
-    print(i, file=sys.stderr)
+if __name__ == "__main__":
+    my_text = Matrix_String("0123456789", 2, 8)
+    my_text.print_matrix()
+
+    for i in my_text.get_sliding():
+        print(i, file=sys.stderr)
