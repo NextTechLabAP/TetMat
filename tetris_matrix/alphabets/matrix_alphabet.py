@@ -81,12 +81,12 @@ class Matrix_String(object):
         if matrix is None:
             matrix = self.get_sliding()
         block_char = "█"
-        block_char = "🛑"
+        # block_char = "🛑"
         out = ""
         for frame in matrix:
             for line in frame:
                 for ch in line:
-                    out += block_char if int(ch) else "  "
+                    out += block_char if int(ch) else " "
                 out += "\n"
             print(out)
             print()
